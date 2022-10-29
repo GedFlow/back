@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: backend-deployment
+ name: bbb-deployment
 spec:
  selector:
    matchLabels:
@@ -13,13 +13,7 @@ spec:
        type: backend
    spec:
     containers:
-    - name: backend
+    - name: bbb
       image: gedflow/back:latest
-      envFrom:
       ports:
       - containerPort: 8000
-      resources:
-        requests:
-          cpu: 100m
-        limits:
-          cpu: 200m
