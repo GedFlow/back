@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: backend-deployment
+spec:
+ selector:
+   matchLabels:
+    type: backend
+ replicas: 1
+ template:
+   metadata:
+     labels:
+       type: backend
+   spec:
+    containers:
+    - name: backend
+      image: gedflow/backend:latest
+      envFrom:
+      ports:
+      - containerPort: 8000
+      resources:
+        requests:
+          cpu: 100m
+        limits:
+          cpu: 200m
