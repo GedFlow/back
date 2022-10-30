@@ -14,7 +14,7 @@ spec:
    spec:
     containers:
     - name: backend-container
-      image: gedflow/back:latestttt
+      image: gedflow/back:latesttt
       ports:
       - containerPort: 8000
       envFrom:
