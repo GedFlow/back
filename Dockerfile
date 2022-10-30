@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:latest
 WORKDIR /apps
 ADD requirements.txt /apps/
 RUN pip install -r /apps/requirements.txt

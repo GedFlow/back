@@ -17,3 +17,8 @@ spec:
       image: gedflow/back:latest
       ports:
       - containerPort: 8000
+      envFrom:
+      - configMapRef:
+          name: cm-mysql
+      - secretRef:
+          name: sec-mysql
